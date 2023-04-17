@@ -1,4 +1,4 @@
-name: Patch and Build
+name: Patch and Build and Upload
 
 on:
   push:
@@ -28,3 +28,17 @@ jobs:
         run: ./gradlew applyPatches
       - name: Build
         run: ./gradlew build
+      - name: Create
+        run: ./gradlew createMojmapPaperclipJar
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: BW-Folia-Bundler
+          path: ./build/libs/folia-bundler-*.jar
+          if-no-files-found: error
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: BW-Folia-Paperclip
+          path: ./build/libs/folia-paperclip-*.jar
+          if-no-files-found: error
