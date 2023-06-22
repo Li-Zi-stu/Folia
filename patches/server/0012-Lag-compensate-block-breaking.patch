@@ -11,7 +11,7 @@ in an intrusive manner to the user when there is no need
 for that to occur.
 
 diff --git a/src/main/java/io/papermc/paper/threadedregions/RegionizedWorldData.java b/src/main/java/io/papermc/paper/threadedregions/RegionizedWorldData.java
-index 89e6dc92bfbb28d20f252eca5257db1d3d042327..5f609782fceda0fdc856123ca8d40d3f8b13b10b 100644
+index 41db6c61de36ebb1c214423dca0ba6a0c5a95cc1..65c4e158d81ac5c5788cf4dcb379061aebd23dcd 100644
 --- a/src/main/java/io/papermc/paper/threadedregions/RegionizedWorldData.java
 +++ b/src/main/java/io/papermc/paper/threadedregions/RegionizedWorldData.java
 @@ -432,11 +432,25 @@ public final class RegionizedWorldData {
@@ -41,10 +41,10 @@ index 89e6dc92bfbb28d20f252eca5257db1d3d042327..5f609782fceda0fdc856123ca8d40d3f
  
      // connections
 diff --git a/src/main/java/net/minecraft/server/level/ServerPlayerGameMode.java b/src/main/java/net/minecraft/server/level/ServerPlayerGameMode.java
-index 59a9a9633ac924c606564b75298fae22f1ffd4ec..33cc8db1892d6c876c2510bd14546766ab7e21e3 100644
+index 7e303f86b6d8d41f96e5b3b3b0327da2082a8211..edfa7fbf209128b2254aa238e679f7be45162327 100644
 --- a/src/main/java/net/minecraft/server/level/ServerPlayerGameMode.java
 +++ b/src/main/java/net/minecraft/server/level/ServerPlayerGameMode.java
-@@ -123,7 +123,7 @@ public class ServerPlayerGameMode {
+@@ -124,7 +124,7 @@ public class ServerPlayerGameMode {
      }
  
      public void tick() {

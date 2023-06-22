@@ -10,10 +10,10 @@ the impact from scaling the region threads, but is not a fix
 to the underlying issue.
 
 diff --git a/src/main/java/net/minecraft/server/MinecraftServer.java b/src/main/java/net/minecraft/server/MinecraftServer.java
-index 3478d9c1db9acf19165df7308b6ae4461fa8fef7..61bac6fda2d2f4b3db8a3f7e3003f47c84d5c4cd 100644
+index 26d332a46556416bb70b6276786b43e1a8ec8449..11ff1bc559316da426070867f045720ebd8c1962 100644
 --- a/src/main/java/net/minecraft/server/MinecraftServer.java
 +++ b/src/main/java/net/minecraft/server/MinecraftServer.java
-@@ -2884,6 +2884,7 @@ public abstract class MinecraftServer extends ReentrantBlockableEventLoop<TickTa
+@@ -2875,6 +2875,7 @@ public abstract class MinecraftServer extends ReentrantBlockableEventLoop<TickTa
      }
  
      public final void executeMidTickTasks() {
