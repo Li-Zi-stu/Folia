@@ -51,7 +51,7 @@ index d9687722e02dfd4088c7030abbf5008eb0a092c8..62484ebf4550b05182f693a3180bbac5
          TickThread.ensureTickThread(thisEntity, "May not tick entity scheduler asynchronously");
          final List<ScheduledTask> toRun;
 diff --git a/src/main/java/net/minecraft/world/entity/Entity.java b/src/main/java/net/minecraft/world/entity/Entity.java
-index 37b90c70196717c3a68b6d3b652e5716ab89998c..deaf4b65b6c9f3dbab6578c25fb78ca84507f70b 100644
+index 5a71b5a37a55baea204821aba734d53dc49cb336..27b57db24587337ccdce29e492052ca419863323 100644
 --- a/src/main/java/net/minecraft/world/entity/Entity.java
 +++ b/src/main/java/net/minecraft/world/entity/Entity.java
 @@ -2889,6 +2889,7 @@ public abstract class Entity implements Nameable, EntityAccess, CommandSource {
@@ -932,7 +932,7 @@ index 75c7645fb5732c43d1da15181cf5c7ee4c3ecd6c..6d3325436a77153438bc40aa86819562
      }
  
 diff --git a/src/main/java/org/bukkit/craftbukkit/entity/CraftEntity.java b/src/main/java/org/bukkit/craftbukkit/entity/CraftEntity.java
-index f001d811e930230f729b0340fb54f083fc4a9eb1..76bcfda336e9cfa039d80ea3ccbebbc3d2b13f7f 100644
+index 2fe15f615522b60bba8e7551eef182458d163cd5..bcb85a4253b5e44b78cbadfb16c3bf0d47d7369e 100644
 --- a/src/main/java/org/bukkit/craftbukkit/entity/CraftEntity.java
 +++ b/src/main/java/org/bukkit/craftbukkit/entity/CraftEntity.java
 @@ -822,7 +822,7 @@ public abstract class CraftEntity implements org.bukkit.entity.Entity {
