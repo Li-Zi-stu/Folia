@@ -5,7 +5,7 @@ Subject: [PATCH] fixup! Rewrite chunk system
 
 
 diff --git a/src/main/java/io/papermc/paper/chunk/system/entity/EntityLookup.java b/src/main/java/io/papermc/paper/chunk/system/entity/EntityLookup.java
-index a295f7a7c59f0a291aec4f9f1a08f6b2798689f6..3208d68c0e8220307028acd4bcd859465611f992 100644
+index 26d1e1af418f980b61a57479cbc64b5bc59e0864..0cdf092d5c3f65a23e26f201768c0e2fea1ffe09 100644
 --- a/src/main/java/io/papermc/paper/chunk/system/entity/EntityLookup.java
 +++ b/src/main/java/io/papermc/paper/chunk/system/entity/EntityLookup.java
 @@ -17,6 +17,7 @@ import net.minecraft.util.AbortableIterationConsumer;
@@ -117,7 +117,7 @@ index f1c68d9850ece7532a8607db955eaa4fc3a4bf05..08075b8895f816420c2a940bf551dfad
          }
  
 diff --git a/src/main/java/net/minecraft/server/level/ChunkMap.java b/src/main/java/net/minecraft/server/level/ChunkMap.java
-index 916bfdfb13d8f8093e1908a7c35344b83d0ee0ac..25fe439c8d1e88a86e85ac9a4761425d98ee6c4f 100644
+index 779c03f17769039cbaaa1210bd0e95163c9386b1..f1f52f9d9f8eafd65b50e3c06c92bcd8fda64286 100644
 --- a/src/main/java/net/minecraft/server/level/ChunkMap.java
 +++ b/src/main/java/net/minecraft/server/level/ChunkMap.java
 @@ -597,7 +597,7 @@ public class ChunkMap extends ChunkStorage implements ChunkHolder.PlayerProvider
@@ -139,10 +139,10 @@ index 916bfdfb13d8f8093e1908a7c35344b83d0ee0ac..25fe439c8d1e88a86e85ac9a4761425d
          }
  
 diff --git a/src/main/java/net/minecraft/server/level/ServerLevel.java b/src/main/java/net/minecraft/server/level/ServerLevel.java
-index f95f1d1bc08b3c8f331a4f760e3218238f74ff67..042ca6b3faae5249210567f2c26dff404974e1ff 100644
+index bb07ad1bb895297356b88dfc4cd17e5e93795c38..60b409e873d8f5d7975cce6e86ee2ed5525d348c 100644
 --- a/src/main/java/net/minecraft/server/level/ServerLevel.java
 +++ b/src/main/java/net/minecraft/server/level/ServerLevel.java
-@@ -2638,12 +2638,12 @@ public class ServerLevel extends Level implements WorldGenLevel {
+@@ -2663,12 +2663,12 @@ public class ServerLevel extends Level implements WorldGenLevel {
          return this.entityLookup; // Paper - rewrite chunk system
      }
  
