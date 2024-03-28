@@ -7,10 +7,10 @@ This allows the player to be re-positioned before logging into
 the world without causing thread checks to trip on Folia.
 
 diff --git a/src/main/java/net/minecraft/server/players/PlayerList.java b/src/main/java/net/minecraft/server/players/PlayerList.java
-index 41ba8950b3aada5eea55a0db841c6b9291262bf2..4b1ee6b9351aeb96ac7a3c2aaa8c464bbca91e22 100644
+index a390227e5af1232f2090d2be72f7789805025f76..bbf43b5844a75a25c1757cfb1c3c9dbe9b1fadde 100644
 --- a/src/main/java/net/minecraft/server/players/PlayerList.java
 +++ b/src/main/java/net/minecraft/server/players/PlayerList.java
-@@ -516,7 +516,13 @@ public abstract class PlayerList {
+@@ -522,7 +522,13 @@ public abstract class PlayerList {
              CompoundTag nbttagcompound1 = nbttagcompound.getCompound("RootVehicle");
              // CraftBukkit start
              ServerLevel finalWorldServer = worldserver1;
@@ -21,6 +21,6 @@ index 41ba8950b3aada5eea55a0db841c6b9291262bf2..4b1ee6b9351aeb96ac7a3c2aaa8c464b
 +                    entity1.setPosRaw(playerPos.x, playerPos.y, playerPos.z, true);
 +                }
 +                // Paper end - force sync root vehicle to player position
-                 return !finalWorldServer.addWithUUID(entity1, org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason.MOUNT) ? null : entity1; // Paper
+                 return !finalWorldServer.addWithUUID(entity1, org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason.MOUNT) ? null : entity1; // Paper - Entity#getEntitySpawnReason
                  // CraftBukkit end
              });
